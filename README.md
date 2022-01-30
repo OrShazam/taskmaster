@@ -8,3 +8,4 @@ there's also a functionality to undo the installation, and to change and display
 the C2 part consists of commands to upload and download files and to run commands on cmd and get results\
 note that connection is disguised as HTTP\
 TODO: implement CMD command and implement GenURL
+repo contains source + C translation + IDA file
